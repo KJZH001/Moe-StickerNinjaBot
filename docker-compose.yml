@@ -5,6 +5,7 @@ services:
     image: 'm3chd09/stickerninjabot:latest'
     build: './'
     volumes:
-      - './.env:/app/.env'
+      - './.env:/app/.env:ro'
       - './data.db:/app/data.db'
+      - './storage:/app/storage'
     restart: always
